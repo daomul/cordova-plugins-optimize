@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/app.css" />
+        <script src="lib/ionic/js/ionic.bundle.js"></script>
+        <style>
+        button {
+        	width: 90%;
+        }
+        body {
+        	margin-top: 50px;
+        }
+        img {
+        	max-width: 100%;
+        	max-height: 250px;
+        }
+        </style>
+	</head>
+	<body>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+        </ion-nav-bar>
+
+            <img id="myImage">
+                
+            <!--  cordova plugin add org.apache.cordova.camera   -->
+
+            <button id="takePicture">调用拍照</button>
+            <button id="usePicture">调用手机相册</button>
+            
+            <!--  cordova plugin add cordova-plugin-contacts  -->
+            
+            <button id="pickContact">获取联系人</button>
+            <div id="selectedContact"></div>
+            
+            <!--  cordova plugins add https://github.com/wildabeast/BarcodeScanner.git -->
+            
+            <button id="startScan">扫描二维码</button>
+            
+            <div id="scanResults"></div>
+            
+            <!--    cordova plugin add cordova-plugin-geolocation-->
+            <!--    cordova plugin add cordova-plugin-dialogs-->
+    
+        <ion-nav-view></ion-nav-view>
+        
+	<script src="cordova.js"></script>	
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+	</body>
+</html>
